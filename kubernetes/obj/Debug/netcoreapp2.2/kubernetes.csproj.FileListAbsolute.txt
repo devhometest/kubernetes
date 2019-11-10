@@ -1,0 +1,5 @@
+C:\Users\vanso\source\repos\devhometest\kubernetes\kubernetes\kubernetes\bin\Debug\netcoreapp2.2\appsettings.Development.json
+C:\Users\vanso\source\repos\devhometest\kubernetes\kubernetes\kubernetes\bin\Debug\netcoreapp2.2\appsettings.json
+C:\Users\vanso\source\repos\devhometest\kubernetes\kubernetes\kubernetes\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
+C:\Users\vanso\source\repos\devhometest\kubernetes\kubernetes\kubernetes\obj\Debug\netcoreapp2.2\kubernetes.AssemblyInfoInputs.cache
+C:\Users\vanso\source\repos\devhometest\kubernetes\kubernetes\kubernetes\obj\Debug\netcoreapp2.2\kubernetes.AssemblyInfo.cs
