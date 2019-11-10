@@ -1,0 +1,28 @@
+version: '3.4'
+
+services:
+  kubernetes1:
+    image: kubernetes1:dev
+    build:
+      target: base
+      labels:
+        com.microsoft.created-by: "visual-studio"
+        com.microsoft.visual-studio.project-name: "Kubernetes1"
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      #- NUGET_FALLBACK_PACKAGES=$container_paths_to_fallback_packages_kubernetes1$
+    volumes:
+      - C:\Users\vanso\source\repos\Kubernetes1\Kubernetes1:/app
+      - C:\Users\vanso\source\repos\Kubernetes1:/src
+      - C:\Users\vanso\vsdbg\vs2017u5:/remote_debugger:rw
+#$nuget_volume_mapping_kubernetes1$
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      #com.microsoft.visualstudio.debuggee.arguments: " $debuggee_arguments_probing_paths_kubernetes1$ \"\""
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
+    tty: true

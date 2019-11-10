@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  kubernetes1:
+    image: ${DOCKER_REGISTRY-}kubernetes1
+    build:
+      context: .
+      dockerfile: Kubernetes1/Dockerfile
